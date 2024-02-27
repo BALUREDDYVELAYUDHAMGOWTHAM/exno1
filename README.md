@@ -29,7 +29,7 @@ STEP 6: Use zscore of to remove outliers
 ### 1) Read and display DataFrame
 ```Python
 import pandas as pd
-df=pd.read_csv('/content/SAMPLEDS.csv')
+df=pd.read_csv("/content/SAMPLEIDS.csv")
 df
 ```
   </td>
@@ -161,7 +161,7 @@ df.nunique()
 <tr>
   <td width=50%>
 
-### 11) Finding the mean value
+### 9) Finding the mean value
 ```Python
 mn=df.TOTAL.mean()
 mn
@@ -171,7 +171,7 @@ mn
               
 #### OUTPUT:
 
-![image](https://github.com/Saravana-kumar369/exno1/assets/117925254/7da7b89e-cc5a-4bd6-a1e8-efb4ea99cd8e)
+![Screenshot 2024-02-27 171508](https://github.com/BALUREDDYVELAYUDHAMGOWTHAM/exno1/assets/119559905/c4e865f3-9c77-4f1a-b03d-66e29cc36ba2)
 
 
 </td>
@@ -179,15 +179,58 @@ mn
 <tr>
   <td width=50%>
 
-### 12) Fill Null value with Mean value
+### 10) Fill Null value with Mean value
 ```Python
-df.head()
+df.TOTAL.fillna(mn,inplace=True)
+df
 ```
   </td>
   <td>
               
 #### OUTPUT:
-![Screenshot 2024-02-23 090324](https://github.com/MAHESWARAN2004/Expno1/assets/119478181/a0a06f86-f464-4d33-935a-a00fbd2d3ef4)
+
+![Screenshot 2024-02-27 171720](https://github.com/BALUREDDYVELAYUDHAMGOWTHAM/exno1/assets/119559905/7616aa46-2fdf-45bf-a321-39b8e6e2b441)
+
+
+</td>
+</tr>
+<tr>
+  <td width=50%>
+    
+### 11) Finding minimum value
+```Python
+mn=df.M4.min()
+mn
+```
+  </td>
+  <td>
+              
+#### OUTPUT:
+
+
+![Screenshot 2024-02-27 171831](https://github.com/BALUREDDYVELAYUDHAMGOWTHAM/exno1/assets/119559905/7a7bf6ee-daa7-480a-ae1b-d67bebd22e2b)
+
+
+
+</td>
+</tr>
+<tr>
+  <td width=50%>
+
+### 12) Printing only Date of Birth
+```Python
+df['cd']=pd.to_datetime(df['DOB'])
+df['cd']
+```
+  </td>
+  <td>
+              
+#### OUTPUT:
+
+![Screenshot 2024-02-27 172720](https://github.com/BALUREDDYVELAYUDHAMGOWTHAM/exno1/assets/119559905/2da7285f-ead4-4a60-8bad-f430c407ee64)
+
+
+
 </td>
 </tr>
 <tr>
